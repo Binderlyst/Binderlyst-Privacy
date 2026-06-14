@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Binderlyst</title>
+  <title>Privacy Policy | Binderlyst</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -24,6 +24,7 @@
       --border-lt:  #2E2280;
     }
 
+    /* Dark root background so mobile overscroll/bounce never flashes white. */
     html { scroll-behavior: smooth; background: var(--bg-end); }
 
     body {
@@ -36,7 +37,7 @@
       min-height: 100vh;
     }
 
-    /* ── Stars background ──────────────────────────────────────────── */
+    /* Stars background */
     body::before {
       content: '';
       position: fixed;
@@ -53,7 +54,7 @@
       z-index: 0;
     }
 
-    /* ── Layout ────────────────────────────────────────────────────── */
+    /* Layout */
     .page {
       position: relative;
       z-index: 1;
@@ -62,7 +63,7 @@
       padding: 60px 24px 100px;
     }
 
-    /* ── Header ────────────────────────────────────────────────────── */
+    /* Header */
     header {
       text-align: center;
       margin-bottom: 56px;
@@ -104,7 +105,7 @@
       font-weight: 500;
     }
 
-    /* ── Sections ──────────────────────────────────────────────────── */
+    /* Sections */
     section {
       margin-bottom: 32px;
     }
@@ -185,7 +186,7 @@
     }
 
 
-    /* ── Contact ───────────────────────────────────────────────────── */
+    /* Contact */
     .contact-link {
       color: var(--accent-lt);
       text-decoration: none;
@@ -199,7 +200,7 @@
       border-color: var(--accent-lt);
     }
 
-    /* ── Footer ────────────────────────────────────────────────────── */
+    /* Footer */
     footer {
       text-align: center;
       margin-top: 64px;
@@ -226,24 +227,27 @@
     <header>
       <img class="app-icon" src="./app_icon.png" alt="Binderlyst" />
       <h1>Privacy Policy</h1>
-      <p class="subtitle">Effective date: 25 May 2026</p>
+      <p class="subtitle">Effective date: 14 June 2026</p>
       <div class="divider"></div>
     </header>
 
     <!-- Overview -->
     <section>
       <div class="section-card">
-        <h2><span class="icon">📄</span>Overview</h2>
+        <h2><span class="icon">🔍</span>Overview</h2>
         <p>
-          This page explains how Binderlyst handles your data. At this point in time,
-          I don't collect personal information, run any analytics, show advertising,
-          or share anything with third parties. Your collection stays on your device
-          and the app only goes online to look up card data from a public database.
+          This page explains how Binderlyst handles your data. Binderlyst doesn't
+          collect personal information, run analytics, show advertising, or share
+          your data with third parties for their own purposes. Your collection stays
+          on your device, and the app only goes online to look up card data from a
+          public database, or (if you choose) to back up your data to your own
+          Google Drive.
         </p>
         <ul>
-          <li>No account required.</li>
+          <li>No account required to use the app.</li>
           <li>No ads or tracking.</li>
           <li>No third-party analytics.</li>
+          <li>Optional Google Drive backup, fully under your control.</li>
           <li>Currently free.</li>
         </ul>
       </div>
@@ -272,21 +276,48 @@
       <div class="section-card">
         <h2><span class="icon">📦</span>Your Collection</h2>
         <p>
-          Your collection data is currently stored locally on your device. There is no
-          Binderlyst account and no server receiving your cards. I don't have access
-          to your collection. If you uninstall the app, all locally stored data is
-          removed with it, unless your device's Android auto-backup is enabled, in which
-          case some data may be backed up to your Google account independently of this app.
+          By default, your collection data is stored locally on your device. Binderlyst
+          has no built-in account system and no server that receives your cards, so your
+          collection isn't accessible to the developer. If you uninstall the app, locally
+          stored data is removed with it, unless your device's Android auto-backup is
+          enabled, in which case some data may be backed up to your Google account
+          independently of this app.
         </p>
         <p>
-          I'm exploring additional storage options, such as cloud support, in the future.
-          For now, I'd recommend exporting your collection regularly using the export
-          options available within the app. CSV, Excel and PDF are all supported.
+          You can also back up your data to your own Google Drive (see
+          <span class="highlight">Google Drive Backup</span> below), and you can export
+          your collection at any time using the in-app export options. CSV, Excel and PDF
+          are all supported.
         </p>
       </div>
     </section>
 
-    <!-- Section 3: Internet & Scryfall -->
+    <!-- Section 3: Google Drive Backup -->
+    <section>
+      <div class="section-card">
+        <h2><span class="icon">☁️</span>Google Drive Backup</h2>
+        <p>
+          Binderlyst offers an <strong>optional</strong> backup feature that saves a copy
+          of your data to <strong>your own</strong> Google Drive, so you can restore it if
+          you lose or change your device. This only happens when you choose to sign in with
+          Google and tap Back up (or enable automatic backup). It is off until you turn it
+          on.
+        </p>
+        <ul>
+          <li>What's backed up: your collection, decks, folders, saved reports, dashboard layout, app settings, and any dashboard attachments, saved as a single backup file in your Drive.</li>
+          <li>Binderlyst uses the limited <strong>drive.file</strong> permission. This means the app can only see and manage the backup file it creates. It cannot see, read, or touch any of your other Google Drive files.</li>
+          <li>The backup is stored in <strong>your</strong> Google Drive. There is no Binderlyst server, and the developer has no access to your backup or your Google account.</li>
+          <li>Your Google account email may be shown inside the app to indicate that you are signed in. This is stored only on your device and is never sent to the developer.</li>
+          <li>You stay in control: you can sign out, turn off backup, or delete the backup file from your Google Drive at any time.</li>
+        </ul>
+        <p>
+          Once data is in your Google Drive, Google's handling of it is governed by
+          <a class="contact-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 4: Internet & Scryfall -->
     <section>
       <div class="section-card">
         <h2><span class="icon">🌐</span>Internet &amp; Scryfall</h2>
@@ -305,13 +336,13 @@
       </div>
     </section>
 
-    <!-- Section 4: What I Don't Collect -->
+    <!-- Section 5: What Binderlyst Doesn't Collect -->
     <section>
       <div class="section-card">
-        <h2><span class="icon">🚫</span>What I Don't Collect</h2>
-        <p>At this point in time, Binderlyst does not collect, store, or transmit any of the following:</p>
+        <h2><span class="icon">🚫</span>What Binderlyst Doesn't Collect</h2>
+        <p>Binderlyst does not collect, store on any server, or send to the developer any of the following:</p>
         <ul>
-          <li>Your name, email address, or any login credentials.</li>
+          <li>Your name, password, or any login credentials. When you sign in for backup, that is handled securely by Google, and Binderlyst never sees your password.</li>
           <li>Your location.</li>
           <li>Your device ID or advertising ID.</li>
           <li>Usage data, session time, or which features you use.</li>
@@ -320,55 +351,53 @@
       </div>
     </section>
 
-    <!-- Section 5: A Note on AI -->
+    <!-- Section 6: A Note on AI -->
     <section>
       <div class="section-card">
         <h2><span class="icon">🤖</span>A Note on AI</h2>
         <p>
-          I use AI to help develop and write code for Binderlyst. I understand this
-          technology can raise concerns and strong opinions within parts of the community,
+          Binderlyst is built with the help of AI tools for writing and developing its code.
+          This technology can raise concerns and strong opinions within parts of the community,
           and that's completely fair. Binderlyst would not exist without it. If this is
-          something that prevents you from using the app, I completely understand and
-          hope you find an alternative that works better for you.
+          something that prevents you from using the app, that's understandable, and we hope
+          you find an alternative that works better for you.
         </p>
       </div>
     </section>
 
-    <!-- Section 6: Monetisation -->
+    <!-- Section 7: Monetisation -->
     <section>
       <div class="section-card">
         <h2><span class="icon">💰</span>Monetisation</h2>
         <p>
-          Binderlyst is currently free and not monetised. As a new app, I'm exploring
-          ways to support its development financially, but that's not my main priority
-          right now. If anything changes, I'll keep users updated. My goal is to avoid
-          intrusive ads, unnecessary annoyances, or paywalls that lock away core
-          features.
+          Binderlyst is currently free and not monetised. As a new app, ways to support its
+          development financially may be explored in future, but that isn't the priority right
+          now. If anything changes, users will be kept updated. The goal is to avoid intrusive
+          ads, unnecessary annoyances, or paywalls that lock away core features.
         </p>
       </div>
     </section>
 
-    <!-- Section 7: Changes -->
+    <!-- Section 8: Changes -->
     <section>
       <div class="section-card">
-        <h2><span class="icon">📋</span>Changes to This Policy</h2>
+        <h2><span class="icon">📝</span>Changes to This Policy</h2>
         <p>
-          If this policy is updated, I'll revise the effective date at the top of the page.
-          Any changes that meaningfully affect how data is handled will be communicated
-          through an app update.
+          If this policy is updated, the effective date at the top of the page will be revised.
+          Any changes that meaningfully affect how data is handled will be communicated through
+          an app update.
         </p>
       </div>
     </section>
 
-    <!-- Section 8: Contact -->
+    <!-- Section 9: Contact -->
     <section>
       <div class="section-card">
         <h2><span class="icon">✉️</span>Contact</h2>
         <p>
-          If you have questions, feedback, concerns, or feature requests, you can reach
-          me at <a class="contact-link" href="mailto:binderlyst@hotmail.com">binderlyst@hotmail.com</a>.
-          I'm currently studying while also working full-time, so responses may take a
-          little time, but I'll do my best to get back to you as soon as I can.
+          If you have questions, feedback, concerns, or feature requests, you can get in touch
+          at <a class="contact-link" href="mailto:binderlyst@hotmail.com">binderlyst@hotmail.com</a>.
+          Responses may take a little time, but you'll get a reply as soon as possible.
         </p>
       </div>
     </section>
