@@ -225,9 +225,9 @@
 
     <!-- Header -->
     <header>
-      <img class="app-icon" src="./app_icon.png" alt="Binderlyst" />
+      <img class="app-icon" src="./app_icon_.png" alt="Binderlyst" />
       <h1>Privacy Policy</h1>
-      <p class="subtitle">Effective date: 14 June 2026</p>
+      <p class="subtitle">Effective date: 17 June 2026</p>
       <div class="divider"></div>
     </header>
 
@@ -237,16 +237,17 @@
         <h2><span class="icon">🔍</span>Overview</h2>
         <p>
           This page explains how Binderlyst handles your data. Binderlyst doesn't
-          collect personal information, run analytics, show advertising, or share
-          your data with third parties for their own purposes. Your collection stays
-          on your device, and the app only goes online to look up card data from a
-          public database, or (if you choose) to back up your data to your own
+          collect personal information, show advertising, or sell or share your data
+          with third parties for their own purposes. Your collection stays on your
+          device. The app uses limited, anonymous analytics and crash reporting to
+          improve reliability (see below), and only goes online to look up card data
+          from a public database, or (if you choose) to back up your data to your own
           Google Drive.
         </p>
         <ul>
           <li>No account required to use the app.</li>
-          <li>No ads or tracking.</li>
-          <li>No third-party analytics.</li>
+          <li>No ads.</li>
+          <li>Anonymous usage analytics &amp; crash reporting, used only to improve the app.</li>
           <li>Optional Google Drive backup, fully under your control.</li>
           <li>Currently free.</li>
         </ul>
@@ -331,8 +332,33 @@
         <ul>
           <li>Network requests are made to Scryfall's servers for card data and card images.</li>
           <li>Card images are loaded from Scryfall each session and are not stored permanently on your device.</li>
-          <li>No advertising, analytics, or crash reporting services are included in the app.</li>
+          <li>No advertising is shown in the app.</li>
         </ul>
+      </div>
+    </section>
+
+    <!-- Section: Analytics & Crash Reporting -->
+    <section>
+      <div class="section-card">
+        <h2><span class="icon">📊</span>Analytics &amp; Crash Reporting</h2>
+        <p>
+          To understand how the app is used and to find and fix bugs, Binderlyst uses
+          Google's Firebase Analytics and Firebase Crashlytics. This collects limited,
+          aggregated technical information. It never includes your collection, the cards
+          you save, or anything that personally identifies you.
+        </p>
+        <ul>
+          <li>Usage events such as screen views and in-app actions (for example: scanning a card, creating a deck, or running a backup).</li>
+          <li>Device and app information: device model, operating-system version, app version, and language.</li>
+          <li>An approximate (country/region-level) location derived from your IP address, never precise or GPS location.</li>
+          <li>Crash diagnostics: the error and a technical stack trace when the app crashes, so it can be fixed.</li>
+        </ul>
+        <p>
+          This data is processed by Google as described in the
+          <a class="contact-link" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a>
+          documentation. It is not used to identify you and is never sold or shared for
+          advertising. The app's advertising identifier is not collected.
+        </p>
       </div>
     </section>
 
@@ -343,10 +369,9 @@
         <p>Binderlyst does not collect, store on any server, or send to the developer any of the following:</p>
         <ul>
           <li>Your name, password, or any login credentials. When you sign in for backup, that is handled securely by Google, and Binderlyst never sees your password.</li>
-          <li>Your location.</li>
-          <li>Your device ID or advertising ID.</li>
-          <li>Usage data, session time, or which features you use.</li>
-          <li>Crash reports or diagnostic logs.</li>
+          <li>Your precise or GPS location.</li>
+          <li>Your advertising ID (its collection is disabled).</li>
+          <li>The contents of your collection, decks, or the card data you save. These stay on your device (and, if you choose, in your own Google Drive).</li>
         </ul>
       </div>
     </section>
