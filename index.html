@@ -75,27 +75,26 @@
   <div class="rule"></div>
 
   <h2>🔍 Overview</h2>
-  <p>This page explains how Binderlyst handles your data. Binderlyst doesn't ask for your name or email, show ad banners, track how you use the app, or sell or share your data with third parties for their own purposes. By default your collection stays on your device. The app goes online to look up card data, prices and news, to back up your data to your own Google Drive if you choose, and to contribute to community stats if you turn that on.</p>
+  <p>This page explains how Binderlyst handles your data. Binderlyst doesn't ask for your name or email, show ad banners, collect how you use the app, or sell or share your data with third parties for their own purposes. By default your collection stays on your device. The app goes online to look up card data, prices and news, to back up your data to your own Google Drive if you choose, and to contribute to community stats if you turn that on.</p>
   <ul>
     <li>No account required to use the app.</li>
     <li>No ad banners, and no ad network or ad SDK in the app.</li>
     <li>No usage analytics and no crash reporting service.</li>
     <li>Optional Google Drive backup, fully under your control.</li>
-    <li>Optional community-stats contribution with no account or ID attached, off unless you turn it on.</li>
+    <li>Optional community stats, off unless you turn it on.</li>
     <li>Free, with an optional cosmetic supporter subscription billed through Google Play. Some buy links are affiliate links; they're clearly marked and can be turned off.</li>
   </ul>
 
   <h2>📷 Camera Access</h2>
-  <p>Binderlyst asks for camera access so you can scan physical trading cards. When you tap the Scan button, the app reads text from the card image using on-device recognition. Nothing is uploaded or saved. The image exists only in memory for the moment it takes to identify the card, then it is gone.</p>
+  <p>Binderlyst asks for camera access so you can scan cards. When you tap Scan, the app takes a photo and reads the card's text on your phone. The photo is only used to identify the card. It stays on your phone and is deleted straight after.</p>
   <ul>
     <li>Camera is only used when you actively tap Scan.</li>
-    <li>No photos are saved to your device or sent anywhere.</li>
     <li>If you would prefer not to grant camera access, all other features still work.</li>
   </ul>
-  <p>The text reading is done by <strong>Google ML Kit</strong>, which runs on your device. ML Kit does not send your images or the text it reads anywhere, but it does send Google basic technical diagnostics about how the recognition itself is working: device model and Android version, app version, performance and error information, and a random identifier for this installation of ML Kit that is not linked to you. Google uses this to maintain and improve ML Kit, as described in the <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a>. Binderlyst never receives it.</p>
+  <p>Card text is read on your phone by <strong>Google ML Kit</strong>. It sends Google basic technical information, like your device model and any errors, but never your photos or cards.</p>
 
   <h2>📦 Your Collection</h2>
-  <p>By default, your collection data is stored locally on your device. Binderlyst has no built-in account system, and by default no server receives your cards, so your collection isn't accessible to the developer. The one exception is the optional Community Stats feature described below: only if you turn it on, the app sends the cards in your decks, want lists and collection, with no name, account or ID attached. If you uninstall the app, locally stored data is removed with it, unless your device's Android auto-backup is enabled, in which case some data may be backed up to your Google account independently of this app.</p>
+  <p>By default, your collection data is stored locally on your device. Binderlyst has no built-in account system, and by default no server receives your cards, so your collection isn't accessible to the developer. The one exception is the optional Community Stats feature described below: only if you turn it on, the app sends the cards in your decks, want lists and collection, without your name or account. If you uninstall the app, locally stored data is removed with it, unless your device's Android auto-backup is enabled, in which case some data may be backed up to your Google account independently of this app.</p>
   <p>You can also back up your data to your own Google Drive (see Google Drive Backup below), and you can export your collection at any time using the in-app export options. CSV, Excel and PDF are all supported.</p>
 
   <h2>☁️ Google Drive Backup</h2>
@@ -110,38 +109,24 @@
   <p>Once data is in your Google Drive, Google's handling of it is governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
 
   <h2>🌐 Internet &amp; Card Data</h2>
-  <p>The app connects to the internet to look up card information from <a href="https://scryfall.com">Scryfall</a>, a free and open trading card database. When you scan or search for a card, a query is sent containing only card identifiers such as a card name or set code. No personal information is ever part of those requests.</p>
-  <ul>
-    <li>Network requests are made to Scryfall's servers for card data, prices and card images.</li>
-    <li>Card images are loaded from Scryfall each session and are not stored permanently on your device.</li>
-    <li>Preconstructed deck lists come from <a href="https://mtgjson.com">MTGJSON</a>. Price history and the in-app news feed are files downloaded from Binderlyst's pages on GitHub, and news items may show thumbnail images from YouTube.</li>
-    <li>These are plain downloads. Like any website you visit, the server can see your IP address and basic device details as part of the request, but the app sends nothing about you or your collection.</li>
-    <li>No ad network or ad SDK is used in the app.</li>
-  </ul>
+  <p>Card details, prices and images come from <a href="https://scryfall.com">Scryfall</a>, and deck lists, price history and news from other public sources. These requests don't include anything about you.</p>
 
   <h2>📊 Analytics &amp; Crash Reporting</h2>
-  <p>Binderlyst doesn't use analytics or crash reporting services. It doesn't record which screens you open or what you do in the app, and if the app crashes, no report is sent. The app's advertising identifier is not collected.</p>
+  <p>Binderlyst doesn't use analytics or crash reporting services. It doesn't record which screens you open or what you do in the app, and if the app crashes, no report is sent. The app doesn't use your advertising ID.</p>
 
   <h2>🤝 Community Stats (Optional)</h2>
-  <p>Binderlyst can show community insights, such as what percentage of decks run a particular card. These come from players who choose to contribute. Contributing is <strong>off by default</strong> and does nothing unless you turn on <strong>"Contribute anonymous data"</strong> in Settings, or tick the optional box when you first set up the app.</p>
-  <p>When it's on, the app sends a snapshot of your decks, want lists and collection to a Binderlyst database (hosted on Google Firebase), at most once a day. It also does this in the background, even when the app isn't open. The snapshot holds only the details the stats need:</p>
-  <ul>
-    <li>For each deck or want list: the format, plus each card line, meaning the card name, deck role, quantity, colour identity, printing (set code) and foil flag.</li>
-    <li>For each owned card: the card name, quantity, printing (set code), foil flag and condition grade.</li>
-    <li>Your app version, and the time it was uploaded.</li>
-  </ul>
-  <p>What is <strong>never</strong> sent: your name, email, Google account or any account or device ID; deck names, notes, covers or tags; folders; prices, values, want-list budgets or spend; images; or per-card dates.</p>
-  <p>There is no sign-in behind this. Each snapshot is saved under a new random name that only your device knows, and nobody can list or read snapshots from outside. Your device uses that name to delete your previous snapshot each time it sends a new one, so only your latest one is kept. Uploads are checked with Google Play Integrity (Firebase App Check), which confirms the request comes from a genuine copy of the app without identifying you. Like any request over the internet, the upload reaches Google's servers from your IP address, which Firebase does not store with the snapshot.</p>
-  <p>Turning it off stops any more uploads and deletes your latest one, so you're left out of future weekly totals. Uploads are deleted after 7 days anyway. Once a week, uploads are combined into group totals, shown only for groups of five or more, and kept for 12 weeks. Totals already made stay as they are, but they can't be traced back to you. This data is processed by Google as described in the <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a> documentation.</p>
+  <p>Binderlyst can show community stats, like how many decks run a card. These come from players who choose to share. It's off unless you turn on <strong>"Contribute anonymized data"</strong> in Settings, or tick the box when you first set up the app.</p>
+  <p>When it's on, the app sends the cards in your decks, want lists and collection, plus your app version, about once a day, including in the background. It never sends your name, email, account, prices, notes or photos.</p>
+  <p>Uploads are combined into weekly totals across players, so nobody's collection is shown. Turning it off stops sharing and deletes your latest upload. Uploads are deleted after a week, and weekly totals are kept for 12 weeks. The data is stored with <a href="https://firebase.google.com/support/privacy">Google Firebase</a>.</p>
 
   <h2>🚫 What Binderlyst Doesn't Collect</h2>
   <p>Binderlyst does not collect, store on any server, or send to the developer any of the following:</p>
   <ul>
     <li>Your name, password, or any login credentials. When you sign in for backup, that is handled securely by Google, and Binderlyst never sees your password.</li>
     <li>Your precise or GPS location.</li>
-    <li>Your advertising ID (its collection is disabled).</li>
+    <li>Your advertising ID.</li>
     <li>Records of how you use the app, or crash reports.</li>
-    <li>The contents of your collection, decks, or the card data you save. These stay on your device (and, if you choose, in your own Google Drive). The optional Community Stats feature above is the only thing that sends any card data off your device, with no account or ID attached, and only when you switch it on.</li>
+    <li>The contents of your collection, decks, or the card data you save. These stay on your device (and, if you choose, in your own Google Drive). The optional Community Stats feature above is the only thing that sends any card data off your device, and only when you switch it on.</li>
   </ul>
 
   <h2>🤖 A Note on AI</h2>
@@ -151,7 +136,7 @@
   <p>Binderlyst shows buy links for cards and sealed products, for example on price tiles in card details and in the New releases section. These are affiliate links to <a href="https://www.tcgplayer.com">TCGplayer</a>: if you buy something after tapping one, Binderlyst may earn a commission at no extra cost to you. Wherever they appear, they're marked with the note "Affiliate links, we may earn a commission."</p>
   <ul>
     <li>Tapping a buy link opens your device's browser, outside the app. Nothing is sent until you tap.</li>
-    <li>The link contains only the card or product being looked up and a tag saying which part of the app it came from, so the retailer knows the visit came from Binderlyst. No personal information is included, and the app learns nothing about what you do on the retailer's site.</li>
+    <li>The link only says which card or product you're looking at and where in the app you tapped it. Binderlyst never learns who you are.</li>
     <li>Links pass through the retailer's affiliate network (Impact), which may set cookies in your browser so a purchase can be credited to Binderlyst. From that point, <a href="https://www.tcgplayer.com/privacypolicy">TCGplayer's privacy policy</a> and <a href="https://impact.com/privacy-policy/">Impact's privacy policy</a> apply.</li>
     <li>You can turn buy links off in Settings, which hides them throughout the app.</li>
   </ul>
@@ -165,7 +150,6 @@
     <li><strong>Binderlyst never sees your payment details.</strong> Card numbers, billing addresses and similar information go to Google, not to the app or the developer. How Google handles that is covered by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
     <li>The app asks Google Play whether the Google account signed in on your device has an active subscription. The answer is a simple yes or no, plus the plan you are on. It is used only to decide whether the premium styles are unlocked.</li>
     <li>That answer is remembered <strong>on your device only</strong>, so the styles still work offline. It isn't sent to any server.</li>
-    <li>No purchase or subscription information is shared with the developer beyond the anonymous, aggregated sales totals Google shows every developer in the Play Console.</li>
   </ul>
   <p>Cancelling, refunds and billing questions are handled through Google Play. There is a link to your Play subscriptions in the app's Settings.</p>
 
@@ -173,7 +157,7 @@
   <p>Binderlyst's developer is responsible for the data on this page and can be contacted at <a href="mailto:binderlyst@gmail.com">binderlyst@gmail.com</a>. Community Stats is based on your consent, and turning it off withdraws it. Firebase may store data outside your country, including in the US, under Google's legal safeguards.</p>
 
   <h2>📝 Changes to This Policy</h2>
-  <p>If this policy is updated, the effective date at the top of the page will be revised. Any changes that meaningfully affect how data is handled will be communicated through an app update.</p>
+  <p>If this policy changes, the date at the top of the page will be updated.</p>
 
   <h2>✉️ Contact</h2>
   <p>If you have questions, feedback, concerns, or feature requests, you can get in touch at <a href="mailto:binderlyst@gmail.com">binderlyst@gmail.com</a>. Responses may take a little time, but you'll get a reply as soon as possible.</p>
